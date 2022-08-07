@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "camera.user",
+      "type": "java.lang.String",
+      "description": "Description for camera.user."
+    },
+    {
+      "name": "camera.password",
+      "type": "java.lang.String",
+      "description": "Description for camera.password."
+    },
+    {
+      "name": "camera.role",
+      "type": "java.lang.String",
+      "description": "Description for camera.role."
+    }
+  ]
+}

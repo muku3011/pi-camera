@@ -1,0 +1,24 @@
+spring:
+  main:
+    banner-mode: "off"
+
+server:
+  port: 9090
+  error:
+    include-message: always
+
+# https://springdoc.org/#swagger-ui-properties
+springdoc:
+  # Disable/Enable the actuator endpoints in swagger-ui, default is false
+  show-actuator: false
+
+  # Disable/Enable the swagger-ui, default is true
+  swagger-ui.enabled: true
+
+  # Disable/Enable the /v3/api-docs endpoint, default is true
+  api-docs.enabled: true
+
+camera:
+  user: "TODO"
+  password: "TODO"
+  role: "TODO"
