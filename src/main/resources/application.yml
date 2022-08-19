@@ -3,7 +3,7 @@ spring:
     banner-mode: "off"
 
 server:
-  port: 9090
+  port: 4040
   error:
     include-message: always
 
@@ -22,3 +22,21 @@ camera:
   user: "TODO"
   password: "TODO"
   role: "TODO"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-components: always
+      show-details: always
+      probes:
+        enabled: true
+
+  metrics:
+    tags:
+      application: "Raspberry Pi Camera"
+      region: "us-east-1"
+      stack: "prod"

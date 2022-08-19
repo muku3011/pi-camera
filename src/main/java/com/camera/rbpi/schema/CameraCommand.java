@@ -41,9 +41,6 @@ public class CameraCommand {
     @NotNull(message = "Timeout is mandatory, default value is 5000, i.e., 5 Seconds. Relevant for timelapse")
     private Integer timeout = DEFAULT_TIMEOUT;
 
-    @JsonIgnore
-    private String imageFileOutputName;
-
     public CameraLibrary getCameraLib() {
         return cameraLib;
     }
@@ -83,6 +80,9 @@ public class CameraCommand {
     public void setTimeout(Integer timeout) {
         this.timeout = timeout;
     }
+
+    @JsonIgnore
+    private String imageFileOutputName;
 
     @JsonIgnore
     public String getImageFileOutputName() {

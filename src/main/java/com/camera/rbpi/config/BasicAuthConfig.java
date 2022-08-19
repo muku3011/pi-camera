@@ -27,6 +27,8 @@ public class BasicAuthConfig {
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .csrf().disable()
+                .authorizeRequests().antMatchers("/actuator/*").permitAll()
+                .and()
                 .authorizeRequests().anyRequest().authenticated()
                 .and()
                 .httpBasic();
@@ -37,7 +39,7 @@ public class BasicAuthConfig {
     public InMemoryUserDetailsManager userDetailsService() {
         UserDetails user = User
                 .withUsername(cameraUser)
-                .password("{noop}"+cameraPassword)
+                .password("{noop}" + cameraPassword)
                 .roles(cameraRole)
                 .build();
         return new InMemoryUserDetailsManager(user);
